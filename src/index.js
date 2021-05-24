@@ -1,7 +1,5 @@
 let now = new Date();
 
-console.log(now.getDay());
-
 let h3 = document.querySelector("h3");
 let hours = now.getHours();
 let minutes = now.getMinutes();
