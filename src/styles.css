@@ -133,10 +133,17 @@ a {
   color: blueviolet;
   text-decoration: none;
   position: relative;
+  color: blueviolet;
+  font-weight: bold;
 }
 
 a:hover {
   color: white;
   cursor: pointer;
   text-decoration: underline;
+}
+
+.footer {
+  padding-left: 20px;
+  text-align: center;
 }
