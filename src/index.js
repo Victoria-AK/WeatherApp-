@@ -1,3 +1,12 @@
+
+function searchCity(city) {
+  let apiKey = "c18394fcc909e55826e68d90aa7686bb";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(`${apiUrl}`).then(showTemperature);
+}
+
+
+
 function formatDate(timestamp){
     let date=new Date(timestamp);
      let hours=date.getHours();
@@ -29,6 +38,8 @@ return  `${day} | ${hours}:${minutes}`;
 function showTemperature(response) {
   let cityElement = document.querySelector(".city");
   cityElement.innerHTML = response.data.name;
+  let h3=document.querySelector("h3");
+  h3.innerHTML=`Last Updated |`;
   let h4 = document.querySelector("h4");
   let temperatureRounded = Math.round(response.data.main.temp);
   h4.innerHTML = `${temperatureRounded} ºC`;
@@ -42,15 +53,12 @@ function showTemperature(response) {
   let displayWind = response.data.wind.speed;
   windSpeed.innerHTML = `${displayWind}`;
 
-  let dateElement=document.querySelector("h3");
+  let dateElement=document.querySelector(".lastUpdated");
   dateElement.innerHTML= formatDate(response.data.dt * 1000);
+  console.log(response.data);
 }
 
-function searchCity(city) {
-  let apiKey = "c18394fcc909e55826e68d90aa7686bb";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(`${apiUrl}`).then(showTemperature);
-}
+
 
 function handleSubmit(event) {
   event.preventDefault();
