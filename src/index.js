@@ -1,6 +1,3 @@
-
-
-
 let now = new Date();
 
 console.log(now.getDay());
@@ -374,5 +371,4 @@ function getCurrentPosition() {
 }
 
 let button = document.querySelector("#current-btn");
-button.addEventListener("click", getCurrentPosition);
-
+button.addEventListener("click", getCurrentPosition)
