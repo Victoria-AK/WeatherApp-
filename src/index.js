@@ -1,74 +1,30 @@
-let now = new Date();
-
-let h3 = document.querySelector("h3");
-let hours = now.getHours();
-let minutes = now.getMinutes();
-
+function formatDate(timestamp){
+    let date=new Date(timestamp);
+     let hours=date.getHours();
+    if(hours < 10){
+    hours=`0${hours}`;
+    }
+     let minutes=date.getMinutes();
+    if (minutes< 10){
+    minutes=`0${minutes}`;
+   
+}
+   
 let days = [
   "Sunday",
   "Monday",
-  " Tuesday",
-  " Wednesday",
-  " Thursday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
   "Friday",
   "Saturday",
-  "Sunday"
 ];
-let day = days[now.getDay()];
 
-let dates = [
-  "00",
-  "01",
-  "02",
-  "03",
-  "04",
-  "05",
-  "06",
-  "07",
-  "08",
-  "09",
-  "10",
-  "11",
-  "12",
-  "13",
-  "14",
-  "15",
-  "16",
-  "17",
-  "18",
-  "19",
-  "20",
-  "21",
-  "22",
-  "23",
-  "24",
-  "25",
-  "26",
-  "27",
-  "28",
-  "29",
-  "30",
-  "31"
-];
-let date = dates[now.getDate()];
+let day = days[date.getDay()];
+return  `${day} | ${hours}:${minutes}`;
+}
 
-let months = [
-  "01",
-  "02",
-  "03",
-  "04",
-  "05",
-  "06",
-  "07",
-  "08",
-  "09",
-  "10",
-  "11",
-  "12"
-];
-let month = months[now.getMonth()];
 
-h3.innerHTML = ` ${day} | ${date}/${month} | ${hours}:${minutes} `;
 
 function showTemperature(response) {
   let cityElement = document.querySelector(".city");
@@ -82,9 +38,12 @@ function showTemperature(response) {
   let Humidity = document.querySelector(".percentage");
   let displayHumidity = response.data.main.humidity;
   Humidity.innerHTML = `${displayHumidity}`;
-  let windSpeed = document.querySelector(".Mph");
+  let windSpeed = document.querySelector(".Km-h");
   let displayWind = response.data.wind.speed;
   windSpeed.innerHTML = `${displayWind}`;
+
+  let dateElement=document.querySelector("h3");
+  dateElement.innerHTML= formatDate(response.data.dt * 1000);
 }
 
 function searchCity(city) {
