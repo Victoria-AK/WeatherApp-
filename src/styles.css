@@ -126,3 +126,14 @@ h4 {
 .footer {
   color: white;
 }
+
+a {
+  color: blueviolet;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
+}
