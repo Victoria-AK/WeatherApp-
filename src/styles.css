@@ -149,3 +149,7 @@ a:hover {
   padding-left: 20px;
   text-align: center;
 }
+
+.weatherIcon {
+  font-size: 5px;
+}
