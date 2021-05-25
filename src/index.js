@@ -36,7 +36,7 @@ return  `${day} | ${hours}:${minutes}`;
 
 
 function showTemperature(response) {
-    console.log(response.data);
+    
   let cityElement = document.querySelector(".city");
   cityElement.innerHTML = response.data.name;
   let h3=document.querySelector("h3");
@@ -56,6 +56,8 @@ function showTemperature(response) {
 
   let dateElement=document.querySelector(".lastUpdated");
   dateElement.innerHTML= formatDate(response.data.dt * 1000);
+  let iconElement=document.querySelector("#icon");
+  iconElement.setAttribute("src",`http://openweathermap.org/img/wn/10d@2x.png`);
 
   
 }
