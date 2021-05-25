@@ -90,6 +90,8 @@ function getCurrentPosition() {
 
 function showFarenheitTemp(event){
 event.preventDefault();
+celciusLink.classList.add("active");
+farenheitLink.classList.remove("active");
 let farenheitTemp=( celciusTemp * 9) / 5 + 32;
 let temperatureRounded=document.querySelector("h4");
 temperatureRounded.innerHTML= Math.round(farenheitTemp);

@@ -166,6 +166,11 @@ a:hover {
   padding-right: 15px;
 }
 
-.weatherTemp.active {
+.weatherTemp .active {
   color: pink;
+  cursor: default;
+}
+
+.weatherTemp .active:hover {
+  text-decoration: none;
 }
