@@ -34,23 +34,19 @@ autocomplete="off"/>
 <img src="images/Nature.svg" width="400">
 </div>
 <h3>  Weather App </h3>
+<div class="weatherTemp">
 <span class="lastUpdated"></span>
-<div class="units">ºC | <a href="#"> ºF</a></div></span>
-<div class="col"><img id="icon"></div>
-
-
+<div class="container">
+<div class="row row-cols-auto">
+<div class="col"><h4></h4></div>
+<div class="col float-right" id="units"> <a href="#" id="celcius-link" class="active">ºC</a> |
+<a href="#"  id="farenheit-link"> ºF</a></div>
+<div class="col-3 "><img id="icon"></div>
+<div id="units" class="float-left">
 </div>
-
-
 </div>
-
-
- </div>
-
 </div>
-  
-
-
+</div>
 <br />
 <div class="container">
 <div class="row">
@@ -63,7 +59,7 @@ Humidity %
 <span Class="percentage"></span>
 </div>
 <div class="col border 1px md-10">
-Wind Speed Km-h
+Wind Speed
 <span class="Km-h"></span>
 </div>
 </div>
