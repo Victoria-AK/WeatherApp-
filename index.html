@@ -12,6 +12,7 @@ integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwr
 <meta name="viewport" content="user-scalable=no,width=device-width" />
 <title>Weather App</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" />
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,600;1,400&display=swap"
 rel="stylesheet" />
 <script src="https://kit.fontawesome.com/bbe4b8db8f.js" crossorigin="anonymous"></script>
@@ -32,10 +33,16 @@ autocomplete="off"/>
 <h2 class="city"></h2>
 <img src="images/Nature.svg" width="400">
 </div>
-<div class="row">
-<h3> VK Weather App </h3>
+<h3>  Weather App </h3>
 <span class="lastUpdated"></span>
-<h4> </br> <img id="icon" src="http://openweathermap.org/img/wn/10d@2x.png"></h4> 
+<div class="container">
+<div class="row row-cols-auto">
+<div class="col"><h4></h4></div>
+<div class="col"><img id="icon"></div>
+
+
+ </div>
+
 </div>
   
 
