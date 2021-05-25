@@ -153,3 +153,7 @@ a:hover {
 .weatherIcon {
   font-size: 5px;
 }
+
+#icon {
+  width: 130px;
+}
