@@ -43,7 +43,7 @@ function showTemperature(response) {
   h3.innerHTML=`Last Updated |`;
   let h4 = document.querySelector("h4");
   let temperatureRounded = Math.round(response.data.main.temp);
-  h4.innerHTML = `${temperatureRounded} ºC`;
+  h4.innerHTML = `${temperatureRounded} `;
   let description = document.querySelector(".looksLike");
   let displayDesc = response.data.weather[0].description;
   description.innerHTML = `${displayDesc}`;
