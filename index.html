@@ -38,16 +38,8 @@ autocomplete="off"/>
 <h3>  Weather App </h3>
 <div class="weatherTemp">
 <span class="lastUpdated"></span>
-<div class="col-6">
-<ul>
-<li>Description
-<span class="looksLike"></span></li>
-<li>Humidity %
-<span Class="percentage"></span></li>
-<li>Wind Speed
-<span class="Km-h"></span></li>
-</ul>
-</div>
+<div class="container">
+<div class="row row-cols-auto">
 <div class="col"><h4></h4></div>
 <div class="col float-right" id="units"> <a href="#" id="celcius-link" class="active">ºC</a> |
 <a href="#"  id="farenheit-link"> ºF</a></div>
@@ -58,25 +50,41 @@ autocomplete="off"/>
 </div>
 </div>
 <br />
-
-
+<div class="container">
+<div class="row">
+<div class="col border 1px ">
+Description
+<span class="looksLike"></span>
+</div>
+<div class="col border 1px">
+Humidity %
+<span Class="percentage"></span>
+</div>
+<div class="col border 1px ">
+Wind Speed
+<span class="Km-h"></span>
+</div>
 </div>
 </div>
 <br/>
 <div class="weather-forecast">
-<div class="row"></div>
-<div class="col-2">
-<div class="weather-forecast-date">Mon</div>
-<img src="http://openweathermap.org/img/wn/10d@2x.png"
-alt =""
-width="42">
-<div class="weather-forecast-temperature">
-<span class="weather-forecast-temperature-max">
-18º </span>
-<span class="weather-forecast-temperature-min">
-12º </span>
-</div>
-</div>
+    <div class="row"></div>
+    <div class="col-2">
+        <div class="weather-forecast-date">
+
+        </div>
+        Mon
+        <img src="http://openweathermap.org/img/wn/10d@2x.png"
+        alt =""
+        width="42">
+        />
+        <div class="weather-forecsr-temperature">
+        <span class="weather-forecast-temperature-max">
+        18 </span>
+        <span class="weather-forecast-temperature-min">
+        12 </span>
+        </div>
+    </div>
 
 </div>
 <br />
