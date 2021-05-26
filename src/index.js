@@ -33,7 +33,26 @@ let day = days[date.getDay()];
 return  `${day} | ${hours}:${minutes}`;
 }
 
+function showForecast(){
+let forecastElement=document.querySelector("#weather-forecast-date");
+forecastElement.innerHTML=` <div class="row"></div>
+    <div class="col-2">
+        <div class="weather-forecast-date">Tuesday</div>
+        
+        <img src="http://openweathermap.org/img/wn/10d@2x.png"
+        alt =""
+        width="42">
+        
+        <div class="weather-forecsr-temperature">
+        <span class="weather-forecast-temperature-max">
+        18 </span>
+        <span class="weather-forecast-temperature-min">
+        12 </span>
+        </div>
+    </div>
 
+</div>;`
+}
 
 function showTemperature(response) {
     
@@ -115,3 +134,5 @@ farenheitLink.addEventListener("click", showFarenheitTemp);
 
 let celciusLink=document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", showCelciusTemp);
+
+showForecast();
