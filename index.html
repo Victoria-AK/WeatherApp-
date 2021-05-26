@@ -19,6 +19,7 @@ rel="stylesheet" />
 </head>
 
 <body>
+
 <section class="where">
 <div class="card ">
 <div class="search">
@@ -27,6 +28,7 @@ rel="stylesheet" />
 autocomplete="off"/>
 <button id="Search-btn" type="submit">Search</button>
 <button id="current-btn" type="button ">Current</button>
+
 </form>
 </div>
 <div class="weather">
@@ -58,11 +60,32 @@ Description
 Humidity %
 <span Class="percentage"></span>
 </div>
-<div class="col border 1px md-10">
+<div class="col border 1px ">
 Wind Speed
 <span class="Km-h"></span>
 </div>
 </div>
+</div>
+<br/>
+<div class="weather-forecast">
+    <div class="row"></div>
+    <div class="col-2">
+        <div class="weather-forecast-date">
+
+        </div>
+        Mon
+        <img src="http://openweathermap.org/img/wn/10d@2x.png"
+        alt =""
+        width="42">
+        />
+        <div class="weather-forecsr-temperature">
+        <span class="weather-forecast-temperature-max">
+        18º </span>
+        <span class="weather-forecast-temperature-min">
+        12º </span>
+        </div>
+    </div>
+
 </div>
 <br />
 <br />
@@ -72,6 +95,7 @@ Wind Speed
 by Victoria Knights
 </div>
 </section>
+
 
 <script type="text/javascript" src="src/index.js"></script>
 </body>
