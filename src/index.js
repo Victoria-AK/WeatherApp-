@@ -35,7 +35,8 @@ return  `${day} | ${hours}:${minutes}`;
 
 function showForecast(){
 let forecastElement=document.querySelector("#weather-forecast-date");
-forecastElement.innerHTML=` <div class="row"></div>
+forecastElement.innerHTML=`
+ <div class="row">
     <div class="col-2">
         <div class="weather-forecast-date">Tuesday</div>
         
@@ -50,8 +51,8 @@ forecastElement.innerHTML=` <div class="row"></div>
         12 </span>
         </div>
     </div>
-
-</div>;`
+</div>
+</div>`;
 }
 
 function showTemperature(response) {
@@ -125,6 +126,9 @@ function showCelciusTemp(event){
 
 }
 
+
+showForecast(); 
+
 let celciusTemp=null;
 let button = document.querySelector("#current-btn");
 button.addEventListener("click", getCurrentPosition);
@@ -135,4 +139,3 @@ farenheitLink.addEventListener("click", showFarenheitTemp);
 let celciusLink=document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", showCelciusTemp);
 
-showForecast();
