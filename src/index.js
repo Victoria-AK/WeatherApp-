@@ -37,7 +37,7 @@ function showForecast(){
 let forecastElement=document.querySelector(".weather-forecast-date");
 forecastElement.innerHTML=`
  <div class="row">
-    <div class="col-2">
+    <div class="col">
         <div class="weather-forecast-date">Tue</div>
         
         <img src="http://openweathermap.org/img/wn/10d@2x.png"
