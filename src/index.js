@@ -35,13 +35,11 @@ return  `${day} | ${hours}:${minutes}`;
 
 function showForecast(){
 let forecastElement=document.querySelector(".weather-forecast-date");
-let forecastHTML=`<div class="row">`;
 let days=["Fri","Sat","Sun"];
+let forecastHTML=`<div class="row">`;
+
 days.forEach(function(day){
-
-})
-
-forecastHTML= forecastHTML + `
+  forecastHTML= forecastHTML + `
 
     <div class="col-2">
         <div class="weather-forecast-date">Tue</div>
@@ -57,6 +55,10 @@ forecastHTML= forecastHTML + `
         12 </span>
         </div>
     </div>`;
+
+});
+
+
 forecastHTML= forecastHTML + `</div>`;
 forecastElement.innerHTML=forecastHTML;
 
