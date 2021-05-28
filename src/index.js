@@ -46,8 +46,6 @@ days.forEach(function(day){
         <img src="http://openweathermap.org/img/wn/10d@2x.png"
         alt =""
         width="42"/>
-        
-        
         <div class="weather-forecsr-temperature">
         <span class="weather-forecast-temperature-max">
         18 </span>
