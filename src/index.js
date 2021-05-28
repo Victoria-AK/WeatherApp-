@@ -34,7 +34,7 @@ return  `${day} | ${hours}:${minutes}`;
 }
 
 function showForecast(){
-let forecastElement=document.querySelector("#weather-forecast-date");
+let forecastElement=document.querySelector(".weather-forecast-date");
 forecastElement.innerHTML=`
  <div class="row">
     <div class="col-2">
