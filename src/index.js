@@ -35,8 +35,9 @@ return  `${day} | ${hours}:${minutes}`;
 
 function showForecast(){
 let forecastElement=document.querySelector(".weather-forecast-date");
-forecastElement.innerHTML=`
- <div class="row">
+let forecastHTML=` <div class="row>`;
+forecastHTML= forecastHTML + `
+
     <div class="col">
         <div class="weather-forecast-date">Tue</div>
         
@@ -53,6 +54,9 @@ forecastElement.innerHTML=`
     </div>
 </div>
 </div>`;
+forecastHTML= forecastHTML +`</div>`;
+forecastElement.innerHTML=forecastHTML;
+
 }
 
 function showTemperature(response) {
