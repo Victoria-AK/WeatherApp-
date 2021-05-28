@@ -40,7 +40,7 @@ let forecastHTML=`<div class="row">`;
 
 days.forEach(function(day){
   forecastHTML= forecastHTML + 
-  `<div class="col-6">
+  `<div class="col">
         <div class="weather-forecast-date">${day}</div>
         
         <img src="http://openweathermap.org/img/wn/10d@2x.png"
