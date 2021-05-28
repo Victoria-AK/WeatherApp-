@@ -196,3 +196,7 @@ a:hover {
 .weather-forecast-temperature {
   font-size: 13px;
 }
+
+.col {
+  display: inline-block;
+}
