@@ -44,7 +44,7 @@ days.forEach(function(day){
         <div class="weather-forecast-date">${day}</div>
         
         <img src="http://openweathermap.org/img/wn/10d@2x.png"
-        alt =""
+
         width="42"/>
         <div class="weather-forecsr-temperature">
         <span class="weather-forecast-temperature-max">
@@ -81,7 +81,7 @@ function showTemperature(response) {
   let description = document.querySelector(".looksLike");
   let displayDesc = response.data.weather[0].description;
   description.innerHTML = `${displayDesc}`;
-  let Humidity = document.querySelector(".percentage");
+  let Humidity = document.querySelector(".humidity-percentage");
   let displayHumidity = response.data.main.humidity;
   Humidity.innerHTML = `${displayHumidity}`;
   let windSpeed = document.querySelector(".Km-h");
@@ -92,7 +92,7 @@ function showTemperature(response) {
   dateElement.innerHTML= formatDate(response.data.dt * 1000);
   let iconElement=document.querySelector("#icon");
   iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
- 
+  
   celciusTemp=response.data.main.temp;
 
   getForecast(response.data.coord);

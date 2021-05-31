@@ -31,7 +31,7 @@ img {
 .city {
   padding-top: 20px;
   font-weight: bold;
-  color: pink;
+  color: coral;
   text-align: left;
   font-size: 35px;
   text-transform: capitalize;
@@ -102,18 +102,22 @@ h3 {
 h4 {
   font-size: 35px;
   font-weight: bold;
-  padding-bottom: 0;
+  padding-bottom: 3px;
+  margin-bottom: 0 auto;
+  color: coral;
 }
 
 .looksLike,
-.percentage,
+.humidity-percentage,
 .Km-h {
   text-align: left;
   color: white;
   text-transform: capitalize;
   display: block;
-  float: left;
+  font-weight: bold;
   padding-left: 0px;
+  padding-top: 0px;
+  margin: 0 auto;
 }
 
 .col {
@@ -122,42 +126,59 @@ h4 {
   padding-top: 10px;
   padding-right: 4px;
   padding-left: 0;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .border {
   padding-top: 10px;
   padding-left: 10px;
   padding-bottom: 10px;
-  border-radius: 5px;
+  border-radius: 15px;
   margin: 0 auto;
+  color: pink;
 }
 
 .footer {
-  color: white;
+  color: grey;
 }
 
 a {
-  color: blueviolet;
+  color: pink;
   text-decoration: none;
   position: relative;
-  color: blueviolet;
   font-weight: bold;
 }
 
 a:hover {
-  color: white;
+  color: #ffffff;
   cursor: default;
   text-decoration: none;
+}
+
+#units {
+  padding-bottom: 8px;
+  font-size: 18px;
+}
+
+#celcius-link {
+  color: grey;
+}
+
+#celcius-link:hover {
+  color: white;
+}
+
+#farenheit-link {
+  color: grey;
+}
+
+#farenheit-link:hover {
+  color: #ffffff;
 }
 
 .footer {
   padding-left: 17px;
   text-align: center;
-}
-
-.weatherIcon {
-  font-size: 5px;
 }
 
 #icon {
@@ -183,16 +204,17 @@ a:hover {
 .weather-forecast {
   margin-top: 20px;
   text-align: center;
+  padding-top: 0px;
+  padding-bottom: 45px;
 }
 
 .weather-forecast-date {
   font-size: 16px;
   color: pink;
-  opacity: 0.6;
 }
 
 .weather-forecast-temperature-min {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 .weather-forecast-temperature {
   font-size: 13px;
