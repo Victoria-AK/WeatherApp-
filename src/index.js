@@ -33,28 +33,43 @@ let day = days[date.getDay()];
 return  `${day} | ${hours}:${minutes}`;
 }
 
-function showForecast(){
+
+function formatDay(timestamp){
+  let date=new Date(timestamp * 1000);
+  let day=date.getDay();
+  let days=["Sun", "Mon", "Tue", "Wed", " Thu", " Fri", " Sat"];
+
+  return days [day];
+
+}
+
+
+function showForecast(response){
+let forecast=response.data.daily;
   
 let forecastElement=document.querySelector("#weather-forecast");
-let days=["Fri","Sat","Sun","Mon", "Tue", "Wed","Thu"];
 let forecastHTML=`<div class="row">`;
 
-days.forEach(function(day){
-  forecastHTML= forecastHTML + 
+forecast.forEach(function(forecastDay, index){
+  if (index<6) {
+  forecastHTML=
+   forecastHTML + 
   `<div class="col">
-        <div class="weather-forecast-date">${day}</div>
+        <div class="weather-forecast-date">${formatDay (forecastDay.dt)}</div>
+        ${index}
         
-        <img src="http://openweathermap.org/img/wn/10d@2x.png"
+        <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
 
         width="42"/>
         <div class="weather-forecast-temperature">
-        <span class="weather-forecast-temperature-max">
-        18 </span>
-        <span class="weather-forecast-temperature-min">
-        12 </span>
+        <span class="weather-forecast-temperature-max">${ Math.round(forecastDay.temp.max)}"
+         </span>
+        <span class="weather-forecast-temperature-min">${ Math.round(forecastDay.temp.min)}"
+         </span>
         </div>
     </div>`;
 
+  }
 });
 
 
@@ -70,7 +85,7 @@ function getForecast(coordinates){
 }
 
 function showTemperature(response) {
-    console.log(response.data.wind.speed);
+  
   let cityElement = document.querySelector(".city");
   cityElement.innerHTML = response.data.name;
   let h3=document.querySelector("h3");
@@ -95,11 +110,12 @@ function showTemperature(response) {
   
   celciusTemp=response.data.main.temp;
 
-  
+  getForecast(response.data.coord);
   
 }
 
-getForecast(response.data.coord);
+
+
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -144,7 +160,7 @@ function showCelciusTemp(event){
 }
 
 
-showForecast(); 
+
 
 let celciusTemp=null;
 let button = document.querySelector("#current-btn");
