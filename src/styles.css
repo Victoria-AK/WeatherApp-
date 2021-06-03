@@ -10,10 +10,6 @@ body {
   padding: 0;
 }
 
-img {
-  max-width: 100%;
-}
-
 .card {
   background-color: black;
   color: pink;
@@ -26,25 +22,16 @@ img {
   margin: 1em;
 }
 
-.city {
-  padding-top: 20px;
-  font-weight: bold;
-  color: coral;
-  text-align: left;
-  font-size: 35px;
-  text-transform: capitalize;
+#input {
+  background-color: white;
+  border-color: white;
+  color: black;
+  padding: 1px;
+  border-radius: 5px;
 }
 
-.temp {
-  font-weight: bold;
-  color: pink;
-}
-
-.fa-cloud {
-  text-align: center;
-  padding-top: 20px;
-  font-size: 55px;
-  color: white;
+img {
+  max-width: 100%;
 }
 
 button {
@@ -59,14 +46,6 @@ button:hover {
   color: black;
   border-color: black;
   transition: ease-in-out 2ms;
-}
-
-#input {
-  background-color: white;
-  border-color: white;
-  color: black;
-  padding: 1px;
-  border-radius: 5px;
 }
 
 #current-btn {
@@ -91,6 +70,15 @@ button:hover {
   transition: ease-in-out 10ms;
 }
 
+.city {
+  padding-top: 20px;
+  font-weight: bold;
+  color: coral;
+  text-align: left;
+  font-size: 35px;
+  text-transform: capitalize;
+}
+
 h3 {
   font-size: 20px;
   color: coral;
@@ -103,54 +91,6 @@ h4 {
   padding-bottom: 3px;
   margin-bottom: 0 auto;
   color: coral;
-}
-
-#descriptionText,
-#humidityText,
-#windSpeedText {
-  color: pink;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.looksLike,
-.humidity-percentage,
-.Km-h {
-  text-align: left;
-  color: white;
-  font-size: 13px;
-  text-transform: capitalize;
-  display: block;
-  font-weight: bold;
-  padding-left: 0px;
-  padding-top: 0px;
-  margin: 0 auto;
-}
-
-.col {
-  display: inline-block;
-  color: pink;
-  padding-top: 10px;
-  padding-right: 4px;
-  padding-left: 0;
-  font-size: 13px;
-}
-
-.border {
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-bottom: 10px;
-  border-radius: 4px;
-  margin: 0 auto;
-  color: pink;
-}
-
-.footer {
-  color: coral;
-  opacity: 0.6px;
-  padding-top: 0;
-  text-align: center;
-  font-size: 13px;
 }
 
 a {
@@ -189,11 +129,6 @@ a:hover {
   color: #ffffff;
 }
 
-.footer {
-  padding-left: 0px;
-  text-align: center;
-}
-
 #icon {
   width: 300px;
   padding-left: 0;
@@ -201,8 +136,26 @@ a:hover {
   padding-bottom: 0;
 }
 
-.col-3 {
-  padding-right: 15px;
+#descriptionText,
+#humidityText,
+#windSpeedText {
+  color: pink;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.looksLike,
+.humidity-percentage,
+.Km-h {
+  text-align: left;
+  color: white;
+  font-size: 13px;
+  text-transform: capitalize;
+  display: block;
+  font-weight: bold;
+  padding-left: 0px;
+  padding-top: 0px;
+  margin: 0 auto;
 }
 
 .weatherTemp .active {
@@ -245,6 +198,29 @@ a:hover {
   color: white;
   font-weight: bold;
 }
+
 .col {
   display: inline-block;
+  color: pink;
+  padding-top: 10px;
+  padding-right: 4px;
+  padding-left: 0;
+  font-size: 13px;
+}
+
+.border {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border-radius: 4px;
+  margin: 0 auto;
+  color: pink;
+}
+
+.footer {
+  color: coral;
+  opacity: 0.6px;
+  padding-top: 0;
+  text-align: center;
+  font-size: 13px;
 }
