@@ -237,7 +237,6 @@ a:hover {
 .weather-forecast-temperature:hover {
   background-color: coral;
   border-radius: 3px;
-
   color: white;
   font-weight: bold;
 }
