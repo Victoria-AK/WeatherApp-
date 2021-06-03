@@ -158,6 +158,8 @@ a:hover {
 #units {
   padding-bottom: 8px;
   font-size: 18px;
+  font-weight: bold;
+  color: grey;
 }
 
 #celcius-link {
